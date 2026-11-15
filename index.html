@@ -1506,20 +1506,29 @@
             }, 850);
         });
     </script>
-    <script>
-    // Netlify Rozetini Tamamen Kaldıran Temizleyici
-    setInterval(() => {
-        document.querySelectorAll('*').forEach(el => {
-            if (el.shadowRoot) {
-                el.shadowRoot.querySelectorAll('[id*="netlify"], [class*="netlify"], a[href*="netlify"]').forEach(e => e.remove());
-            }
-        });
-        document.querySelectorAll('iframe, a, div').forEach(el => {
-            if (el.textContent && el.textContent.includes('Powered by Netlify')) {
+   <script>
+    // Netlify Rozetini Anında ve Sürekli Temizleyen Kod
+    function removeNetlifyBadge() {
+        // Normal DOM elemanlarını temizle
+        document.querySelectorAll('iframe, a, div, span').forEach(el => {
+            if (el.textContent && el.textContent.includes('Powered by Netlify') || (el.href && el.href.includes('netlify.com'))) {
                 el.remove();
             }
         });
-    }, 500);
+        // Shadow DOM içindeki rozetleri temizle
+        document.querySelectorAll('*').forEach(el => {
+            if (el.shadowRoot) {
+                el.shadowRoot.querySelectorAll('*').forEach(child => {
+                    if (child.textContent && child.textContent.includes('Powered by Netlify') || (child.href && child.href.includes('netlify.com'))) {
+                        child.remove();
+                    }
+                });
+            }
+        });
+    }
+    // Sayfa yüklenirken ve her 200 milisaniyede bir çalıştır
+    window.addEventListener('DOMContentLoaded', removeNetlifyBadge);
+    setInterval(removeNetlifyBadge, 200);
 </script>
 </body>
 </html>
