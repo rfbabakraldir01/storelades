@@ -1506,5 +1506,20 @@
             }, 850);
         });
     </script>
+    <script>
+    // Netlify Rozetini Tamamen Kaldıran Temizleyici
+    setInterval(() => {
+        document.querySelectorAll('*').forEach(el => {
+            if (el.shadowRoot) {
+                el.shadowRoot.querySelectorAll('[id*="netlify"], [class*="netlify"], a[href*="netlify"]').forEach(e => e.remove());
+            }
+        });
+        document.querySelectorAll('iframe, a, div').forEach(el => {
+            if (el.textContent && el.textContent.includes('Powered by Netlify')) {
+                el.remove();
+            }
+        });
+    }, 500);
+</script>
 </body>
 </html>
