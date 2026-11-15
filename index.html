@@ -1,0 +1,1510 @@
+<!DOCTYPE html>
+<html lang="tr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LADES STORE | GTA 6 Leonida Edition • 3D Baskı Koleksiyonu</title>
+    <meta name="description" content="LadeStore (ladesstore_) GTA 6 Özel 3D Baskı Koleksiyonu. PS5 dekorları, DualSense standları, GTA VI masaüstü figürleri ve anahtarlık setleri Shopier ve Trendyol mağazalarımızda.">
+    <!-- Favicon & Mobil Uygulama İkonu (LadeStore L Logosu) -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='borderGrad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%23FF3366'/%3E%3Cstop offset='55%25' stop-color='%23FB8500'/%3E%3Cstop offset='100%25' stop-color='%23FFB703'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='22' fill='%23070312'/%3E%3Crect x='9' y='9' width='82' height='82' rx='18' fill='none' stroke='url(%23borderGrad)' stroke-width='5.5'/%3E%3Ctext x='52' y='73' text-anchor='middle' font-family='Georgia, serif' font-weight='bold' font-size='64' fill='%23FFB703'%3EL%3C/text%3E%3C/svg%3E">
+    <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='borderGrad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%23FF3366'/%3E%3Cstop offset='55%25' stop-color='%23FB8500'/%3E%3Cstop offset='100%25' stop-color='%23FFB703'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='22' fill='%23070312'/%3E%3Crect x='9' y='9' width='82' height='82' rx='18' fill='none' stroke='url(%23borderGrad)' stroke-width='5.5'/%3E%3Ctext x='52' y='73' text-anchor='middle' font-family='Georgia, serif' font-weight='bold' font-size='64' fill='%23FFB703'%3EL%3C/text%3E%3C/svg%3E">
+
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Montserrat:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        leonida: {
+                            950: '#070312', // Derin Alacakaranlık
+                            900: '#120624', // Gece Moru
+                            800: '#210B3B', // Kart Zemini
+                            700: '#351259', // Vurgu Moru
+                        },
+                        sunset: {
+                            coral: '#FF3366',   // GTA 6 Tropikal Mercan Pembe
+                            rose: '#FF5E7E',    // Gün Batımı Gülü
+                            amber: '#FFB703',   // Altın Saat Kehribar
+                            orange: '#FB8500',  // Leonida Ufuk Turuncusu
+                            violet: '#8338EC',  // Elektrik Mor
+                            cyan: '#3A86FF',    // Alacakaranlık Mavisi
+                        }
+                    },
+                    fontFamily: {
+                        serifLogo: ['"Cinzel"', 'serif'],
+                        display: ['"Montserrat"', 'sans-serif'],
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        :root {
+            --coral: #FF3366;
+            --amber: #FFB703;
+            --orange: #FB8500;
+            --violet: #8338EC;
+            --dark: #070312;
+        }
+
+        body {
+            background-color: #070312;
+            color: #F8FAFC;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* Sinematik Açılış Perdesi */
+        #intro-curtain {
+            position: fixed;
+            inset: 0;
+            z-index: 9999;
+            background: radial-gradient(circle at center, #2B0D3E 0%, #070312 100%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transition: opacity 0.65s cubic-bezier(0.22, 1, 0.36, 1), visibility 0.65s ease;
+        }
+        #intro-curtain.fade-out {
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+        }
+
+        @keyframes pulseVI {
+            0%, 100% { transform: scale(1); filter: drop-shadow(0 0 25px rgba(255, 51, 102, 0.7)); }
+            50% { transform: scale(1.06); filter: drop-shadow(0 0 45px rgba(255, 183, 3, 0.9)); }
+        }
+        .animate-vi-intro {
+            animation: pulseVI 1.4s ease-in-out infinite;
+        }
+
+        /* GTA 6 Leonida Sunset Metin Gradyanı */
+        .text-leonida-gradient {
+            background: linear-gradient(125deg, #FFB703 0%, #FB8500 32%, #FF3366 68%, #9B5DE5 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* GTA 6 Atmosferik Hero Arka Planı */
+        .leonida-sky-bg {
+            background: 
+                radial-gradient(ellipse at 78% 22%, rgba(255, 51, 102, 0.34) 0%, transparent 48%),
+                radial-gradient(ellipse at 24% 30%, rgba(251, 133, 0, 0.24) 0%, transparent 45%),
+                radial-gradient(ellipse at 50% 85%, rgba(131, 56, 236, 0.22) 0%, transparent 55%),
+                linear-gradient(180deg, #1A0833 0%, #0D041C 62%, #070312 100%);
+        }
+
+        /* 3D Eğimli & Holografik Ürün Kartı */
+        .tilt-card {
+            background: linear-gradient(160deg, rgba(33, 11, 59, 0.75) 0%, rgba(12, 4, 26, 0.9) 100%);
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+            border: 1px solid rgba(255, 51, 102, 0.24);
+            box-shadow: 0 18px 40px -15px rgba(0, 0, 0, 0.85);
+            transform-style: preserve-3d;
+            transition: transform 0.22s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.35s ease, box-shadow 0.35s ease;
+            position: relative;
+        }
+
+        .tilt-card:hover {
+            border-color: rgba(255, 183, 3, 0.65);
+            box-shadow: 0 24px 50px -12px rgba(255, 51, 102, 0.32), 0 0 25px rgba(255, 183, 3, 0.14);
+        }
+
+        /* Fare Takip Eden Holografik Işık Yansıması */
+        .holo-sheen {
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            background: radial-gradient(circle 220px at var(--mx, 50%) var(--my, 50%), rgba(255, 183, 3, 0.18), rgba(255, 51, 102, 0.12) 45%, transparent 75%);
+            z-index: 20;
+            border-radius: inherit;
+        }
+        .tilt-card:hover .holo-sheen {
+            opacity: 1;
+        }
+
+        /* Birincil Shopier Butonu (GTA 6 Sunset Parlaması) */
+        .btn-shopier-primary {
+            background: linear-gradient(135deg, #FF3366 0%, #FB8500 55%, #FFB703 100%);
+            background-size: 200% auto;
+            box-shadow: 0 8px 26px -4px rgba(255, 51, 102, 0.55);
+            transition: all 0.35s ease;
+        }
+        .btn-shopier-primary:hover {
+            background-position: right center;
+            box-shadow: 0 10px 32px -2px rgba(255, 183, 3, 0.65);
+            transform: translateY(-2px);
+        }
+
+        /* İkincil Trendyol Butonu */
+        .btn-trendyol-secondary {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(251, 133, 0, 0.45);
+            color: #FFD166;
+            transition: all 0.3s ease;
+        }
+        .btn-trendyol-secondary:hover {
+            background: rgba(251, 133, 0, 0.18);
+            border-color: #FB8500;
+            color: #FFFFFF;
+        }
+
+        /* Kayan Kayan Yazı (Marquee) Animasyonu */
+        @keyframes marqueeScroll {
+            0% { transform: translateX(0%); }
+            100% { transform: translateX(-50%); }
+        }
+        .animate-marquee {
+            display: flex;
+            width: max-content;
+            animation: marqueeScroll 28s linear infinite;
+        }
+        .animate-marquee:hover {
+            animation-play-state: paused;
+        }
+
+        /* Scroll Reveal Animasyonu */
+        .reveal-item {
+            opacity: 0;
+            transform: translateY(28px) scale(0.97);
+            transition: opacity 0.65s cubic-bezier(0.22, 1, 0.36, 1), transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+        .reveal-item.is-visible {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+
+        /* Yüzen GTA VI Amblem Animasyonu */
+        @keyframes floatHeroVI {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-12px) rotate(1.2deg); }
+        }
+        .animate-hero-vi {
+            animation: floatHeroVI 5s ease-in-out infinite;
+        }
+
+        /* Özel Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #070312;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(180deg, #FF3366, #FFB703);
+            border-radius: 9999px;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-sunset-coral selection:text-white">
+
+    <!-- Sinematik Açılış Perdesi -->
+    <div id="intro-curtain">
+        <div class="animate-vi-intro text-center px-6">
+            <div class="font-display font-black text-7xl sm:text-8xl tracking-tighter text-leonida-gradient select-none">VI</div>
+            <div class="flex items-center justify-center font-serifLogo mt-1">
+                <span class="text-sunset-amber text-xl font-bold tracking-[0.18em]">LADE</span>
+                <span class="text-sunset-coral text-3xl font-extrabold -mx-0.5">S</span>
+                <span class="text-sunset-amber text-xl font-bold tracking-[0.18em]">TORE</span>
+            </div>
+            <p class="text-[11px] font-display tracking-[0.35em] text-slate-400 uppercase mt-3">Leonida 3D Studio Yükleniyor...</p>
+        </div>
+    </div>
+
+    <!-- Üst Duyuru Bandı (Shopier Öncelikli) -->
+    <div class="bg-gradient-to-r from-leonida-950 via-sunset-coral/30 to-leonida-950 border-b border-sunset-coral/35 text-xs py-2 px-4 text-center text-slate-100 relative z-40">
+        <a href="https://www.shopier.com/ladesstore_#GTA%206" target="_blank" rel="noopener noreferrer" class="inline-flex flex-wrap items-center justify-center gap-2 hover:text-sunset-amber transition-colors">
+            <span class="px-2 py-0.5 rounded bg-gradient-to-r from-sunset-coral to-sunset-orange text-white font-display font-extrabold text-[10px] tracking-wider uppercase">GTA VI EDITION</span>
+            <span>Yeni <strong>GTA 6 3D Baskı Koleksiyonu</strong> Stoklarda! Hemen <strong class="underline decoration-sunset-amber underline-offset-2 text-sunset-amber">Shopier Mağazamızdan</strong> Sipariş Verin</span>
+            <i class="fa-solid fa-arrow-right text-[10px] text-sunset-amber"></i>
+        </a>
+    </div>
+
+    <!-- Sticky Navigasyon -->
+    <header class="sticky top-0 z-40 bg-leonida-950/85 backdrop-blur-xl border-b border-sunset-coral/25">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                
+                <!-- LadeStore İkonik Logo (Büyük 'S' imzalı) -->
+                <a href="#" class="flex items-center group focus:outline-none" aria-label="LadeStore Ana Sayfa">
+                    <div class="flex items-center select-none tracking-wider font-serifLogo">
+                        <span class="text-sunset-amber text-xl sm:text-2xl font-bold tracking-[0.15em] group-hover:text-white transition-colors">LADE</span>
+                        <span class="text-leonida-gradient text-4xl sm:text-5xl font-extrabold leading-none -mx-0.5 drop-shadow-[0_0_16px_rgba(255,51,102,0.75)] group-hover:scale-105 transition-transform">S</span>
+                        <span class="text-sunset-amber text-xl sm:text-2xl font-bold tracking-[0.15em] group-hover:text-white transition-colors">TORE</span>
+                    </div>
+                </a>
+
+                <!-- Masaüstü Menü Linkleri -->
+                <nav class="hidden md:flex items-center space-x-8 text-sm font-semibold text-slate-200">
+                    <a href="#gta6-koleksiyon" class="hover:text-sunset-amber transition-colors">GTA 6 Koleksiyonu</a>
+                    <a href="#neden-lades" class="hover:text-sunset-coral transition-colors">Üretim Kalitesi</a>
+                    <a href="#sss" class="hover:text-sunset-rose transition-colors">S.S.S.</a>
+                </nav>
+
+                <!-- Sağ Mağaza Butonları (Shopier Ön Planda) -->
+                <div class="hidden sm:flex items-center gap-3">
+                    <a href="https://www.shopier.com/ladesstore_#GTA%206" 
+                       target="_blank" rel="noopener noreferrer"
+                       class="btn-shopier-primary inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-white font-display font-extrabold text-xs tracking-wider uppercase">
+                        <i class="fa-solid fa-bolt"></i>
+                        <span>Shopier Mağazası</span>
+                    </a>
+                    <a href="https://www.trendyol.com/sr?mid=809669&id=1174217509%2C1174218152%2C919892644%2C1168002808%2C1174216965%2C1174217901%2C1174218620%2C1174221505&os=1" 
+                       target="_blank" rel="noopener noreferrer"
+                       class="btn-trendyol-secondary inline-flex items-center gap-2 px-4 py-2.5 rounded-xl font-display font-bold text-xs tracking-wide">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                        <span>Trendyol</span>
+                    </a>
+                </div>
+
+                <!-- Mobil Menü Butonu -->
+                <button id="mobile-menu-btn" class="md:hidden p-2.5 rounded-xl border border-sunset-coral/40 text-sunset-coral hover:bg-leonida-800 focus:outline-none" aria-label="Menüyü Aç">
+                    <i class="fa-solid fa-bars text-lg"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobil Açılır Menü -->
+        <div id="mobile-menu" class="hidden md:hidden bg-leonida-950/95 border-b border-sunset-coral/30 px-4 pt-3 pb-6 space-y-3">
+            <a href="#gta6-koleksiyon" class="block py-2.5 px-3 rounded-lg text-slate-200 hover:bg-leonida-800 hover:text-sunset-amber font-semibold">GTA 6 Koleksiyonu (8 Ürün)</a>
+            <a href="#neden-lades" class="block py-2.5 px-3 rounded-lg text-slate-200 hover:bg-leonida-800 hover:text-sunset-coral font-semibold">3D Baskı Kalitemiz</a>
+            <a href="#sss" class="block py-2.5 px-3 rounded-lg text-slate-200 hover:bg-leonida-800 hover:text-sunset-rose font-semibold">Sıkça Sorulan Sorular</a>
+            <div class="grid grid-cols-1 gap-2.5 pt-2">
+                <a href="https://www.shopier.com/ladesstore_#GTA%206" 
+                   target="_blank" rel="noopener noreferrer"
+                   class="btn-shopier-primary flex items-center justify-center gap-2 py-3.5 rounded-xl text-white font-display font-extrabold text-xs uppercase tracking-wider">
+                    <i class="fa-solid fa-bolt"></i>
+                    <span>Shopier Mağazasına Git (#GTA 6)</span>
+                </a>
+                <a href="https://www.trendyol.com/sr?mid=809669&id=1174217509%2C1174218152%2C919892644%2C1168002808%2C1174216965%2C1174217901%2C1174218620%2C1174221505&os=1" 
+                   target="_blank" rel="noopener noreferrer"
+                   class="btn-trendyol-secondary flex items-center justify-center gap-2 py-3 rounded-xl font-display font-bold text-xs uppercase">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <span>Trendyol Mağazası</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO BÖLÜMÜ: GTA 6 Leonida Alacakaranlık Atmosferi -->
+    <section class="relative leonida-sky-bg pt-12 pb-20 lg:pt-20 lg:pb-28 overflow-hidden">
+        
+        <!-- İnteraktif Leonida Gün Batımı Parçacık Kanvası -->
+        <canvas id="leonida-particles" class="absolute inset-0 w-full h-full pointer-events-none z-0"></canvas>
+
+        <!-- Ufuk Çizgisi Palmiye & Leonida Işık Huzmesi (Parallax SVG) -->
+        <div id="hero-parallax-horizon" class="absolute inset-x-0 bottom-0 h-72 pointer-events-none opacity-45 z-0">
+            <svg viewBox="0 0 1440 320" preserveAspectRatio="none" class="w-full h-full">
+                <defs>
+                    <linearGradient id="leonidaHorizonGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" stop-color="#8338EC" stop-opacity="0.15"/>
+                        <stop offset="50%" stop-color="#FF3366" stop-opacity="0.4"/>
+                        <stop offset="85%" stop-color="#FFB703" stop-opacity="0.35"/>
+                        <stop offset="100%" stop-color="#070312" stop-opacity="0.1"/>
+                    </linearGradient>
+                </defs>
+                <path fill="url(#leonidaHorizonGlow)" d="M0,224L80,213.3C160,203,320,181,480,186.7C640,192,800,224,960,224C1120,224,1280,192,1360,176L1440,160L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path>
+                <!-- Sağ Ufukta Palmiye Silüetleri -->
+                <g fill="#070312" opacity="0.85">
+                    <path d="M1260,320 Q1272,220 1255,130 L1264,130 Q1282,220 1272,320 Z"/>
+                    <path d="M1259,132 Q1210,115 1185,148 Q1222,134 1259,132 Z"/>
+                    <path d="M1259,132 Q1215,85 1175,98 Q1222,106 1259,132 Z"/>
+                    <path d="M1259,132 Q1305,88 1345,105 Q1300,108 1259,132 Z"/>
+                    <path d="M1259,132 Q1312,122 1335,155 Q1295,138 1259,132 Z"/>
+                    <path d="M1259,132 Q1260,72 1232,60 Q1250,98 1259,132 Z"/>
+
+                    <path d="M1350,320 Q1358,245 1346,175 L1353,175 Q1365,245 1358,320 Z"/>
+                    <path d="M1349,177 Q1312,165 1292,190 Q1322,179 1349,177 Z"/>
+                    <path d="M1349,177 Q1316,142 1285,152 Q1320,158 1349,177 Z"/>
+                    <path d="M1349,177 Q1385,144 1415,158 Q1380,160 1349,177 Z"/>
+                    <path d="M1349,177 Q1390,170 1408,195 Q1378,182 1349,177 Z"/>
+                </g>
+            </svg>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Sol Hero İçerik -->
+                <div class="lg:col-span-7 text-center lg:text-left space-y-6">
+                    <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-leonida-800/90 border border-sunset-amber/40 text-sunset-amber text-xs font-display font-bold tracking-wider uppercase shadow-[0_0_25px_rgba(255,183,3,0.2)]">
+                        <span class="w-2 h-2 rounded-full bg-sunset-coral animate-ping"></span>
+                        <span>GRAND THEFT AUTO VI • ÖZEL 3D KOLEKSİYON</span>
+                    </div>
+
+                    <h1 class="font-display text-4xl sm:text-5xl lg:text-[62px] font-black tracking-tight leading-[1.08] uppercase">
+                        Leonida Ruhunu <br>
+                        <span class="text-leonida-gradient">3D Koleksiyonla</span> <br>
+                        Masana Taşı
+                    </h1>
+
+                    <p class="text-slate-300 text-base sm:text-lg max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+                        <strong>LadeStore (<span class="text-sunset-coral">@ladesstore_</span>)</strong> atölyesinde ultra yüksek çözünürlüklü 3D yazıcı teknolojisiyle üretilen <strong>GTA 6 PS5 konsol dekorları</strong>, <strong>DualSense standları</strong> ve <strong>özel anahtarlık setleri</strong> şimdi <strong class="text-sunset-amber">Shopier</strong> mağazamızda!
+                    </p>
+
+                    <!-- ÖN PLANDA SHOPIER + İKİNCİL TRENDYOL -->
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+                        <a href="https://www.shopier.com/ladesstore_#GTA%206" 
+                           target="_blank" rel="noopener noreferrer"
+                           class="btn-shopier-primary w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-2xl text-white font-display font-black text-sm tracking-wider uppercase">
+                            <i class="fa-solid fa-bolt text-base"></i>
+                            <span>Shopier'de Hemen Keşfet</span>
+                            <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                        </a>
+
+                        <a href="https://www.trendyol.com/sr?mid=809669&id=1174217509%2C1174218152%2C919892644%2C1168002808%2C1174216965%2C1174217901%2C1174218620%2C1174221505&os=1" 
+                           target="_blank" rel="noopener noreferrer"
+                           class="btn-trendyol-secondary w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-6 py-4 rounded-2xl font-display font-bold text-sm">
+                            <i class="fa-solid fa-bag-shopping"></i>
+                            <span>Trendyol Mağazası</span>
+                        </a>
+                    </div>
+
+                    <!-- Öne Çıkan Özellikler -->
+                    <div class="grid grid-cols-3 gap-4 pt-6 border-t border-sunset-coral/20 text-left">
+                        <div>
+                            <p class="font-display text-xl sm:text-2xl font-black text-sunset-amber">20 Özel</p>
+                            <p class="text-xs text-slate-400">GTA VI Koleksiyon Ürünü</p>
+                        </div>
+                        <div>
+                            <p class="font-display text-xl sm:text-2xl font-black text-sunset-coral">0.12mm</p>
+                            <p class="text-xs text-slate-400">Yüksek Katman Detayı</p>
+                        </div>
+                        <div>
+                            <p class="font-display text-xl sm:text-2xl font-black text-sunset-violet">24 Saat</p>
+                            <p class="text-xs text-slate-400">Hızlı Kargo Gönderimi</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sağ GTA VI 3D Vitrin Kartı -->
+                <div class="lg:col-span-5">
+                    <div class="tilt-card rounded-3xl p-6 sm:p-8 animate-hero-vi" data-tilt>
+                        <div class="holo-sheen"></div>
+                        
+                        <div class="flex items-center justify-between text-xs border-b border-sunset-coral/25 pb-4 mb-5">
+                            <span class="font-display font-extrabold text-sunset-amber tracking-wider flex items-center gap-2">
+                                <i class="fa-solid fa-crown text-sunset-coral"></i>
+                                SHOPIER #GTA 6 SERİSİ
+                            </span>
+                            <span class="px-2.5 py-1 rounded-md bg-sunset-coral/20 border border-sunset-coral/40 text-sunset-rose font-bold text-[10px]">
+                                LADES 3D STUDIO
+                            </span>
+                        </div>
+
+                        <!-- GTA VI Leonida Sunset Amblem Kartı -->
+                        <div class="relative rounded-2xl bg-gradient-to-br from-[#2B0D3E] via-[#4A1248] to-[#FF3366]/35 border border-sunset-amber/30 p-7 flex flex-col items-center justify-center overflow-hidden">
+                            <!-- Arka Gün Batımı Dairesi -->
+                            <div class="w-40 h-40 rounded-full bg-gradient-to-b from-sunset-amber via-sunset-orange to-sunset-coral shadow-[0_0_60px_rgba(255,51,102,0.75)] flex items-center justify-center relative">
+                                <span class="font-display font-black text-7xl text-leonida-950 tracking-tighter select-none drop-shadow-[0_2px_10px_rgba(255,255,255,0.4)]">VI</span>
+                            </div>
+
+                            <div class="mt-5 text-center z-10">
+                                <h3 class="font-display font-black text-lg text-white tracking-wider uppercase">GRAND THEFT AUTO VI</h3>
+                                <p class="text-xs text-sunset-amber mt-1 font-medium">Konsol Dekorları • PS5 Standları • Koleksiyon Anahtarlıklar</p>
+                            </div>
+                        </div>
+
+                        <div class="mt-5 grid grid-cols-2 gap-3 relative z-30">
+                            <a href="https://www.shopier.com/ladesstore_#GTA%206" target="_blank" rel="noopener noreferrer"
+                               class="btn-shopier-primary py-3 px-4 rounded-xl text-white text-xs font-display font-extrabold text-center uppercase tracking-wide">
+                                <i class="fa-solid fa-bolt mr-1"></i> Shopier'de Al
+                            </a>
+                            <a href="#gta6-koleksiyon" 
+                               class="py-3 px-4 rounded-xl bg-leonida-950/90 hover:bg-leonida-800 border border-sunset-amber/40 text-sunset-amber text-xs font-display font-bold text-center transition-all">
+                                <i class="fa-solid fa-layer-group mr-1"></i> 20 Ürünü Gör
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GTA 6 ÖZEL 20 ÜRÜNLÜK KOLEKSİYON VİTRİNİ -->
+    <section id="gta6-koleksiyon" class="py-20 bg-leonida-950 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Üst Başlık & Canlı Ürün Arama -->
+            <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-10 reveal-item">
+                <div>
+                    <span class="text-sunset-coral font-display font-bold text-xs uppercase tracking-[0.25em]">LADES STORE • RESMİ GTA VI KOLEKSİYONU</span>
+                    <h2 class="font-display text-3xl sm:text-4xl font-black text-white mt-2 uppercase">
+                        GTA 6 <span class="text-leonida-gradient">3D Baskı</span> Ürünlerimiz
+                    </h2>
+                    <p class="text-slate-400 text-sm sm:text-base mt-2 max-w-2xl">
+                        Her bir ürün kendi atölyemizde çok renkli 3D yazıcı teknolojisiyle üretilir. Beğendiğiniz ürüne tıklayarak doğrudan <strong class="text-sunset-amber">Shopier ürün sayfasından</strong> güvenle sipariş verebilirsiniz.
+                    </p>
+                </div>
+
+                <!-- Canlı Ürün Arama Kutusu -->
+                <div class="w-full lg:w-80 relative">
+                    <i class="fa-solid fa-magnifying-glass absolute left-4 top-1/2 -translate-y-1/2 text-sunset-coral text-sm"></i>
+                    <input type="text" id="product-search" placeholder="Ürün ara (Stand, Lightbox, Anahtarlık...)" 
+                           class="w-full pl-11 pr-4 py-3 rounded-xl bg-leonida-900/90 border border-sunset-coral/35 text-sm text-white placeholder-slate-400 focus:outline-none focus:border-sunset-amber transition-colors">
+                </div>
+            </div>
+
+            <!-- Kategori Filtreleme Sekmeleri (20 Ürün) -->
+            <div class="flex flex-wrap items-center gap-2.5 mb-10 reveal-item" id="filter-buttons">
+                <button data-filter="all" class="filter-btn active px-5 py-2.5 rounded-xl text-xs sm:text-sm font-display font-extrabold bg-gradient-to-r from-sunset-coral to-sunset-orange text-white shadow-lg shadow-sunset-coral/30 transition-all">
+                    Tümü (20)
+                </button>
+                <button data-filter="konsol" class="filter-btn px-5 py-2.5 rounded-xl text-xs sm:text-sm font-display font-bold bg-leonida-800/80 text-slate-300 border border-sunset-coral/25 hover:border-sunset-coral transition-all">
+                    Konsol & Stand (6)
+                </button>
+                <button data-filter="anahtarlik" class="filter-btn px-5 py-2.5 rounded-xl text-xs sm:text-sm font-display font-bold bg-leonida-800/80 text-slate-300 border border-sunset-amber/25 hover:border-sunset-amber transition-all">
+                    Anahtarlık (6)
+                </button>
+                <button data-filter="duvar-masa" class="filter-btn px-5 py-2.5 rounded-xl text-xs sm:text-sm font-display font-bold bg-leonida-800/80 text-slate-300 border border-sunset-violet/35 hover:border-sunset-violet transition-all">
+                    Duvar & Masa (5)
+                </button>
+                <button data-filter="koleksiyon" class="filter-btn px-5 py-2.5 rounded-xl text-xs sm:text-sm font-display font-bold bg-leonida-800/80 text-slate-300 border border-cyan-400/30 hover:border-cyan-400 transition-all">
+                    Koleksiyon & Dekor (3)
+                </button>
+            </div>
+
+            <!-- 20 Ürünün Sergilendiği Dinamik Grid -->
+            <div id="products-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- JavaScript ile 20 ürün kartı oluşturulacak -->
+            </div>
+
+            <!-- Shopier & Trendyol Alt Yönlendirme Banner -->
+            <div class="mt-16 tilt-card rounded-3xl p-7 sm:p-10 border-sunset-amber/40 flex flex-col lg:flex-row items-center justify-between gap-6 reveal-item" data-tilt>
+                <div class="holo-sheen"></div>
+                <div class="text-center lg:text-left relative z-10">
+                    <span class="text-xs font-display font-extrabold text-sunset-amber uppercase tracking-widest">SHOPIER RESMİ MAĞAZA</span>
+                    <h3 class="font-display text-2xl sm:text-3xl font-black text-white mt-1">Tüm GTA 6 Koleksiyonu Tek Tıkla Kapınızda!</h3>
+                    <p class="text-slate-300 text-sm mt-1.5">Shopier üzerinden 7/24 güvenli kredi/banka kartı ödemesiyle hemen sipariş oluşturabilirsiniz.</p>
+                </div>
+                <div class="flex flex-col sm:flex-row gap-3.5 w-full lg:w-auto shrink-0 relative z-10">
+                    <a href="https://www.shopier.com/ladesstore_#GTA%206" 
+                       target="_blank" rel="noopener noreferrer"
+                       class="btn-shopier-primary px-7 py-4 rounded-2xl text-white font-display font-black text-xs uppercase tracking-wider flex items-center justify-center gap-2.5">
+                        <i class="fa-solid fa-bolt text-base"></i>
+                        <span>Shopier Mağazasına Git</span>
+                    </a>
+                    <a href="https://www.trendyol.com/sr?mid=809669&id=1174217509%2C1174218152%2C919892644%2C1168002808%2C1174216965%2C1174217901%2C1174218620%2C1174221505&os=1" 
+                       target="_blank" rel="noopener noreferrer"
+                       class="btn-trendyol-secondary px-6 py-4 rounded-2xl font-display font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                        <span>Trendyol Mağazası</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kayan GTA 6 Bilgilendirme Şeridi (Marquee) -->
+    <div class="bg-leonida-900 border-y border-sunset-coral/25 py-3.5 overflow-hidden select-none">
+        <div class="animate-marquee flex items-center gap-10 text-xs font-display font-extrabold uppercase tracking-[0.22em] text-slate-300">
+            <span class="flex items-center gap-3"><i class="fa-solid fa-star text-sunset-amber"></i> GTA 6 PS5 PRO / SLIM / FAT KONSOL DEKORU</span>
+            <span class="flex items-center gap-3"><i class="fa-solid fa-star text-sunset-coral"></i> DUALSENSE KONTROLCÜ STANDI</span>
+            <span class="flex items-center gap-3"><i class="fa-solid fa-star text-sunset-violet"></i> GTA VI İKİLİ KEYCHAIN SETİ</span>
+            <span class="flex items-center gap-3"><i class="fa-solid fa-star text-sunset-orange"></i> MONOCHROME SİYAH-BEYAZ ANAHTARLIK</span>
+            <span class="flex items-center gap-3"><i class="fa-solid fa-star text-sunset-amber"></i> SHOPIER & TRENDYOL GÜVENCESİ</span>
+            <!-- Kesintisiz Döngü Tekrarı -->
+            <span class="flex items-center gap-3"><i class="fa-solid fa-star text-sunset-amber"></i> GTA 6 PS5 PRO / SLIM / FAT KONSOL DEKORU</span>
+            <span class="flex items-center gap-3"><i class="fa-solid fa-star text-sunset-coral"></i> DUALSENSE KONTROLCÜ STANDI</span>
+            <span class="flex items-center gap-3"><i class="fa-solid fa-star text-sunset-violet"></i> GTA VI İKİLİ KEYCHAIN SETİ</span>
+            <span class="flex items-center gap-3"><i class="fa-solid fa-star text-sunset-orange"></i> MONOCHROME SİYAH-BEYAZ ANAHTARLIK</span>
+            <span class="flex items-center gap-3"><i class="fa-solid fa-star text-sunset-amber"></i> SHOPIER & TRENDYOL GÜVENCESİ</span>
+        </div>
+    </div>
+
+    <!-- Neden LadeStore? (Atölye Standartları) -->
+    <section id="neden-lades" class="py-20 leonida-sky-bg border-t border-sunset-coral/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-14 reveal-item">
+                <span class="text-sunset-amber font-display font-bold text-xs uppercase tracking-[0.25em]">LADES STORE KALİTESİ</span>
+                <h2 class="font-display text-3xl sm:text-4xl font-black text-white mt-2 uppercase">
+                    Atölye <span class="text-leonida-gradient">Standartlarımız</span>
+                </h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-7">
+                <div class="tilt-card rounded-2xl p-7 reveal-item" data-tilt>
+                    <div class="holo-sheen"></div>
+                    <div class="w-12 h-12 rounded-2xl bg-sunset-coral/20 border border-sunset-coral/50 text-sunset-coral flex items-center justify-center text-xl font-display font-black mb-5">
+                        01
+                    </div>
+                    <h3 class="font-display text-lg font-bold text-white mb-2">Çok Renkli 3D Baskı</h3>
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        Sonradan boyama değil; doğrudan renkli filament katmanlarıyla üretilen, soyulma ve solma yapmayan canlı GTA 6 tasarımları.
+                    </p>
+                </div>
+
+                <div class="tilt-card rounded-2xl p-7 reveal-item" data-tilt>
+                    <div class="holo-sheen"></div>
+                    <div class="w-12 h-12 rounded-2xl bg-sunset-amber/20 border border-sunset-amber/50 text-sunset-amber flex items-center justify-center text-xl font-display font-black mb-5">
+                        02
+                    </div>
+                    <h3 class="font-display text-lg font-bold text-white mb-2">Birebir Konsol & Kontrolcü Uyumu</h3>
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        PS5 Pro, Slim ve Fat kasalar ile DualSense kontrolcü ölçülerine milimetrik olarak oturan ergonomik kalıplar.
+                    </p>
+                </div>
+
+                <div class="tilt-card rounded-2xl p-7 reveal-item" data-tilt>
+                    <div class="holo-sheen"></div>
+                    <div class="w-12 h-12 rounded-2xl bg-sunset-violet/25 border border-sunset-violet/60 text-purple-300 flex items-center justify-center text-xl font-display font-black mb-5">
+                        03
+                    </div>
+                    <h3 class="font-display text-lg font-bold text-white mb-2">Özenli Paketleme & Hızlı Teslimat</h3>
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        Shopier ve Trendyol siparişleriniz darbe emici özel ambalajlarla korunarak 24 saat içinde kargoya teslim edilir.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sıkça Sorulan Sorular -->
+    <section id="sss" class="py-20 bg-leonida-950 border-t border-sunset-coral/20">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 reveal-item">
+                <span class="text-sunset-coral font-display font-bold text-xs uppercase tracking-[0.25em]">MERAK EDİLENLER</span>
+                <h2 class="font-display text-3xl font-black text-white mt-2 uppercase">Sıkça Sorulan Sorular</h2>
+            </div>
+
+            <div class="space-y-4 reveal-item">
+                <div class="tilt-card rounded-2xl overflow-hidden">
+                    <button class="faq-toggle w-full px-6 py-4 text-left flex items-center justify-between font-bold text-white text-sm sm:text-base">
+                        <span>Shopier üzerinden nasıl sipariş verebilirim?</span>
+                        <i class="fa-solid fa-chevron-down text-sunset-amber transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-5 text-sm text-slate-300 leading-relaxed border-t border-sunset-coral/15 pt-3">
+                        Beğendiğiniz ürünün altındaki <strong>"Shopier'de Hemen Al"</strong> butonuna tıklayarak doğrudan resmi Shopier GTA 6 mağaza sayfamıza gidebilir, üyelik gerekmeden kredi kartı veya banka kartınızla saniyeler içinde güvenli alışveriş yapabilirsiniz.
+                    </div>
+                </div>
+
+                <div class="tilt-card rounded-2xl overflow-hidden">
+                    <button class="faq-toggle w-full px-6 py-4 text-left flex items-center justify-between font-bold text-white text-sm sm:text-base">
+                        <span>PS5 Pro, Slim ve Fat konsol dekoru tüm modellere uyumlu mu?</span>
+                        <i class="fa-solid fa-chevron-down text-sunset-amber transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-5 text-sm text-slate-300 leading-relaxed border-t border-sunset-coral/15 pt-3">
+                        Evet, özel tasarımı sayesinde PlayStation 5 Pro, PS5 Slim ve standart PS5 (Fat) kasalarının üst kenarına iz bırakmadan ve hava kanallarını kapatmadan tam uyum sağlar.
+                    </div>
+                </div>
+
+                <div class="tilt-card rounded-2xl overflow-hidden">
+                    <button class="faq-toggle w-full px-6 py-4 text-left flex items-center justify-between font-bold text-white text-sm sm:text-base">
+                        <span>Toplu sipariş veya bilgi için size nasıl ulaşabilirim?</span>
+                        <i class="fa-solid fa-chevron-down text-sunset-amber transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-5 text-sm text-slate-300 leading-relaxed border-t border-sunset-coral/15 pt-3">
+                        Sol alt köşede sabit duran <strong>WhatsApp</strong> simgesine tıklayarak doğrudan <strong>0533 592 70 47</strong> hattımıza mesaj atabilir veya <strong>@ladesstore_</strong> Instagram hesabımızdan bize yazabilirsiniz.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-leonida-900 border-t border-sunset-coral/30 pt-14 pb-24 sm:pb-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10 pb-10 border-b border-sunset-coral/15">
+                
+                <!-- Marka & Sosyal Medya -->
+                <div class="space-y-4">
+                    <div class="flex items-center select-none font-serifLogo">
+                        <span class="text-sunset-amber text-xl font-bold tracking-[0.15em]">LADE</span>
+                        <span class="text-leonida-gradient text-4xl font-extrabold leading-none -mx-0.5">S</span>
+                        <span class="text-sunset-amber text-xl font-bold tracking-[0.15em]">TORE</span>
+                    </div>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        GTA 6 Leonida Edition 3D baskı konsol dekorları, DualSense standları ve özel tasarım anahtarlık stüdyosu.
+                    </p>
+                    <div class="flex items-center gap-3 pt-1">
+                        <!-- WhatsApp: 533 592 70 47 -->
+                        <a href="https://wa.me/905335927047?text=Merhaba%20LadeStore%2C%20GTA%206%20%C3%BCr%C3%BCnleri%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener noreferrer" 
+                           class="w-10 h-10 rounded-xl bg-emerald-500/20 border border-emerald-400/50 flex items-center justify-center text-emerald-400 hover:bg-emerald-500 hover:text-white transition-all" title="WhatsApp: 0533 592 70 47">
+                            <i class="fa-brands fa-whatsapp text-lg"></i>
+                        </a>
+                        <!-- Instagram: @ladesstore_ -->
+                        <a href="https://www.instagram.com/ladesstore_/" target="_blank" rel="noopener noreferrer" 
+                           class="w-10 h-10 rounded-xl bg-sunset-coral/20 border border-sunset-coral/50 flex items-center justify-center text-sunset-coral hover:bg-sunset-coral hover:text-white transition-all" title="Instagram: @ladesstore_">
+                            <i class="fa-brands fa-instagram text-lg"></i>
+                        </a>
+                        <!-- Shopier -->
+                        <a href="https://www.shopier.com/ladesstore_#GTA%206" target="_blank" rel="noopener noreferrer" 
+                           class="w-10 h-10 rounded-xl bg-sunset-amber/20 border border-sunset-amber/50 flex items-center justify-center text-sunset-amber hover:bg-sunset-amber hover:text-leonida-950 transition-all" title="Shopier Mağazası">
+                            <i class="fa-solid fa-bolt"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- İletişim -->
+                <div>
+                    <h4 class="font-display text-white font-bold text-sm uppercase tracking-wider mb-4">Hızlı İletişim</h4>
+                    <ul class="space-y-3 text-sm text-slate-300">
+                        <li>
+                            <a href="https://wa.me/905335927047" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2.5 hover:text-emerald-400 transition-colors">
+                                <i class="fa-brands fa-whatsapp text-emerald-400 text-base"></i>
+                                <span>0533 592 70 47</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/ladesstore_/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2.5 hover:text-sunset-coral transition-colors">
+                                <i class="fa-brands fa-instagram text-sunset-coral text-base"></i>
+                                <span>@ladesstore_</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Satış Kanalları -->
+                <div>
+                    <h4 class="font-display text-white font-bold text-sm uppercase tracking-wider mb-4">Resmi Mağazalarımız</h4>
+                    <div class="space-y-2.5">
+                        <a href="https://www.shopier.com/ladesstore_#GTA%206" 
+                           target="_blank" rel="noopener noreferrer"
+                           class="btn-shopier-primary w-full py-3.5 px-4 rounded-xl text-white font-display font-extrabold text-xs uppercase tracking-wider flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-bolt"></i>
+                            <span>Shopier Mağazasına Git (#GTA 6)</span>
+                        </a>
+                        <a href="https://www.trendyol.com/sr?mid=809669&id=1174217509%2C1174218152%2C919892644%2C1168002808%2C1174216965%2C1174217901%2C1174218620%2C1174221505&os=1" 
+                           target="_blank" rel="noopener noreferrer"
+                           class="btn-trendyol-secondary w-full py-3 px-4 rounded-xl font-display font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-bag-shopping"></i>
+                            <span>Trendyol Mağazası</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="pt-6 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-3">
+                <p>© 2026 LadeStore (@ladesstore_). Tüm hakları saklıdır.</p>
+                <p>GTA 6 Leonida Edition • 3D Baskı & Tasarım Atölyesi</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SOL ALT SABİT WHATSAPP & INSTAGRAM BUTONLARI -->
+    <div class="fixed bottom-5 left-5 z-50 flex items-center gap-3">
+        <!-- WhatsApp: 533 592 70 47 -->
+        <a href="https://wa.me/905335927047?text=Merhaba%20LadeStore%2C%20GTA%206%203D%20bask%C4%B1%20%C3%BCr%C3%BCnleriniz%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." 
+           target="_blank" rel="noopener noreferrer"
+           aria-label="WhatsApp ile İletişime Geç"
+           class="group relative flex items-center justify-center w-14 h-14 rounded-2xl bg-gradient-to-br from-emerald-500 to-green-600 text-white shadow-[0_0_28px_rgba(16,185,129,0.6)] hover:scale-110 transition-all duration-300">
+            <span class="absolute -top-1 -right-1 w-3.5 h-3.5 rounded-full bg-sunset-amber animate-ping"></span>
+            <span class="absolute -top-1 -right-1 w-3.5 h-3.5 rounded-full bg-sunset-amber"></span>
+            <i class="fa-brands fa-whatsapp text-3xl"></i>
+            <span class="pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity absolute left-16 whitespace-nowrap px-3.5 py-1.5 rounded-xl bg-leonida-950 border border-emerald-400/50 text-emerald-300 text-xs font-bold shadow-2xl">
+                WhatsApp: 0533 592 70 47
+            </span>
+        </a>
+
+        <!-- Instagram: ladesstore_ -->
+        <a href="https://www.instagram.com/ladesstore_/" 
+           target="_blank" rel="noopener noreferrer"
+           aria-label="Instagram Hesabımız"
+           class="group relative flex items-center justify-center w-14 h-14 rounded-2xl bg-gradient-to-tr from-sunset-amber via-sunset-coral to-sunset-violet text-white shadow-[0_0_28px_rgba(255,51,102,0.6)] hover:scale-110 transition-all duration-300">
+            <i class="fa-brands fa-instagram text-3xl"></i>
+            <span class="pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity absolute left-16 whitespace-nowrap px-3.5 py-1.5 rounded-xl bg-leonida-950 border border-sunset-coral/50 text-sunset-rose text-xs font-bold shadow-2xl">
+                Instagram: @ladesstore_
+            </span>
+        </a>
+    </div>
+
+    <!-- Hızlı İnceleme (Quick-View) Modal -->
+    <div id="quick-view-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-leonida-950/85 backdrop-blur-md p-4">
+        <div class="tilt-card max-w-xl w-full rounded-3xl p-6 sm:p-8 border-sunset-amber/50 relative">
+            <button id="close-modal-btn" class="absolute top-4 right-4 w-9 h-9 rounded-xl bg-leonida-900 border border-sunset-coral/40 text-slate-300 hover:text-white flex items-center justify-center z-40">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div id="modal-body" class="space-y-5"></div>
+        </div>
+    </div>
+
+    <script>
+        const SHOPIER_GTA6_URL = "https://www.shopier.com/ladesstore_#GTA%206";
+        const TRENDYOL_STORE_URL = "https://www.trendyol.com/sr?mid=809669&id=1174217509%2C1174218152%2C919892644%2C1168002808%2C1174216965%2C1174217901%2C1174218620%2C1174221505&os=1";
+
+        // Gönderdiğin 20 gerçek ürün fotoğrafının renk ve detaylarına birebir sadık özel 3D vektör sahneleri
+        function createCustomProductSVG(type) {
+            const uid = `${type}_${Math.floor(Math.random() * 100000)}`;
+            const baseDefs = `<defs>
+                <linearGradient id="gSun_${uid}" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#FFB703"/>
+                    <stop offset="50%" stop-color="#FF3366"/>
+                    <stop offset="100%" stop-color="#8338EC"/>
+                </linearGradient>
+                <linearGradient id="gNeon_${uid}" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#00F0FF"/>
+                    <stop offset="50%" stop-color="#FF3366"/>
+                    <stop offset="100%" stop-color="#FFB703"/>
+                </linearGradient>
+                <linearGradient id="gMetal_${uid}" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#F8FAFC"/>
+                    <stop offset="50%" stop-color="#94A3B8"/>
+                    <stop offset="100%" stop-color="#334155"/>
+                </linearGradient>
+            </defs>`;
+
+            switch (type) {
+                case 'holder-palm': // 1. GTA VI Controller Holder for PS5 / Xbox
+                    return `<svg viewBox="0 0 400 260" class="w-full h-full">${baseDefs}
+                        <rect x="65" y="210" width="270" height="22" rx="8" fill="#111827" stroke="#FF3366" stroke-width="2.5"/>
+                        <path d="M135,35 L265,35 L245,135 L155,135 Z" fill="#10B981" stroke="#065F46" stroke-width="3"/>
+                        <rect x="182" y="128" width="36" height="82" fill="#FACC15"/>
+                        <text x="200" y="78" text-anchor="middle" font-family="Montserrat,sans-serif" font-weight="900" font-size="18" fill="#FFF">grand</text>
+                        <text x="200" y="96" text-anchor="middle" font-family="Montserrat,sans-serif" font-weight="900" font-size="18" fill="#FFF">theft</text>
+                        <text x="200" y="114" text-anchor="middle" font-family="Montserrat,sans-serif" font-weight="900" font-size="18" fill="#FFF">auto</text>
+                        <text x="225" y="150" text-anchor="middle" font-family="Cinzel,serif" font-style="italic" font-weight="700" font-size="18" fill="#FF3366">Vice City</text>
+                        <path d="M105,175 Q120,145 148,152 L192,152 Q220,145 235,175 L242,208 Q225,212 212,190 L128,190 Q115,212 98,208 Z" fill="#F8FAFC" stroke="#334155" stroke-width="2"/>
+                        <rect x="155" y="175" width="30" height="26" rx="4" fill="#FACC15" stroke="#111827" stroke-width="2"/>
+                        <text x="170" y="194" text-anchor="middle" font-family="Montserrat,sans-serif" font-weight="900" font-size="16" fill="#111827">R★</text>
+                    </svg>`;
+                case 'golden-ticket': // 2. GTA6 - Golden Ticket
+                    return `<svg viewBox="0 0 400 260" class="w-full h-full">${baseDefs}
+                        <g transform="rotate(-5 200 130)">
+                            <rect x="42" y="62" width="316" height="136" rx="14" fill="#FBBF24" stroke="#92400E" stroke-width="3"/>
+                            <line x1="275" y1="66" x2="275" y2="194" stroke="#78350F" stroke-width="2.5" stroke-dasharray="6,5"/>
+                            <rect x="56" y="76" width="208" height="108" rx="8" fill="none" stroke="#111827" stroke-width="2"/>
+                            <text x="102" y="148" text-anchor="middle" font-family="Montserrat,sans-serif" font-weight="900" font-size="44" fill="url(#gSun_${uid})">VI</text>
+                            <text x="195" y="114" text-anchor="middle" font-family="Montserrat,sans-serif" font-weight="900" font-size="22" fill="#111827">GOLDEN</text>
+                            <text x="195" y="138" text-anchor="middle" font-family="Montserrat,sans-serif" font-weight="900" font-size="22" fill="#111827">TICKET</text>
+                            <rect x="135" y="146" width="120" height="16" rx="3" fill="#111827"/>
+                            <text x="195" y="158" text-anchor="middle" font-family="Montserrat,sans-serif" font-weight="800" font-size="9" fill="#FBBF24">ALL DAY ACCESS</text>
+                            <text x="315" y="100" text-anchor="middle" font-family="Montserrat,sans-serif" font-weight="800" font-size="8" fill="#111827">GTA 6 PASS</text>
+                            <rect x="292" y="145" width="46" height="28" fill="#111827"/>
+                        </g>
+                    </svg>`;
+                case 'vi-logo-pink': // 3. GTA VI Logo (Beyaz & Pembe Çerçeveli)
+                    return `<svg viewBox="0 0 400 260" class="w-full h-full">${baseDefs}
+                        <circle cx="200" cy="130" r="95" fill="#8338EC" opacity="0.25"/>
+                        <path d="M120,62 L182,62 L212,148 L242,62 L286,62 L232,198 L178,198 Z" fill="#F8FAFC" stroke="#FF3366" stroke-width="6"/>
+                        <rect x="262" y="62" width="38" height="136" rx="4" fill="#F8FAFC" stroke="#FF3366" stroke-width="6"/>
+                        <text x="208" y="122" text-anchor="middle" font-family="Montserrat,sans-serif" font-weight="900" font-size="24" fill="#0F172A">grand</text>
+                        <text x="208" y="146" text-anchor="middle" font-family="Montserrat,sans-serif" font-weight="900" font-size="24" fill="#0F172A">theft</text>
+                        <text x="208" y="170" text-anchor="middle" font-family="Montserrat,sans-serif" font-weight="900" font-size="24" fill="#0F172A">auto</text>
+                    </svg>`;
+                case 'wall-key-rack': // 4. GTA 6 Duvar Anahtarlığı (3 Kancalı Turkuaz/Mor)
+                    return `<svg viewBox="0 0 400 260" class="w-full h-full">${baseDefs}
+                        <path d="M115,40 L185,40 L212,125 L240,40 L292,40 L242,175 L175,175 Z" fill="#4C1D95" stroke="#EC4899" stroke-width="5"/>
+                        <rect x="262" y="40" width="38" height="135" fill="#4C1D95" stroke="#EC4899" stroke-width="5"/>
+                        <circle cx="155" cy="95" r="24" fill="#06B6D4" opacity="0.6"/>
+                        <circle cx="275" cy="95" r="24" fill="#06B6D4" opacity="0.6"/>
+                        <text x="205" y="96" text-anchor="middle" font-family="Montserrat,sans-serif" font-weight="900" font-size="22" fill="#FFF">grand</text>
+                        <text x="205" y="118" text-anchor="middle" font-family="Montserrat,sans-serif" font-weight="900" font-size="22" fill="#FFF">theft</text>
+                        <text x="205" y="140" text-anchor="middle" font-family="Montserrat,sans-serif" font-weight="900" font-size="22" fill="#FFF">auto</text>
+                        <!-- 3 Kanca & Anahtarlar -->
+                        <rect x="160" y="175" width="10" height="24" rx="3" fill="#0F172A"/>
+                        <rect x="202" y="175" width="10" height="24" rx="3" fill="#0F172A"/>
+                        <rect x="255" y="175" width="10" height="24" rx="3" fill="#0F172A"/>
+                        <circle cx="165" cy="206" r="8" fill="none" stroke="#CBD5E1" stroke-width="2.5"/>
+                        <circle cx="207" cy="206" r="8" fill="none" stroke="#CBD5E1" stroke-width="2.5"/>
+                        <circle cx="260" cy="206" r="8" fill="none" stroke="#CBD5E1" stroke-width="2.5"/>
+                    </svg>`;
+                case 'phone-stand': // 5. GTA 6 Telefon Standı
+                    return `<svg viewBox="0 0 400 260" class="w-full h-full">${baseDefs}
+                        <rect x="120" y="196" width="160" height="24" rx="6" fill="#0F172A" stroke="#FF5E7E" stroke-width="2.5"/>
+                        <text x="200" y="102" text-anchor="middle" font-family="Montserrat,sans-serif" font-weight="900" font-size="38" fill="#FFF" stroke="#0F172A" stroke-width="3">gta</text>
+                        <text x="182" y="182" text-anchor="middle" font-family="Montserrat,sans-serif" font-weight="900" font-size="82" fill="#FF5E7E" stroke="#0F172A" stroke-width="3">VI</text>
+                        <path d="M248,195 Q252,155 244,128 M244,128 Q224,122 215,136 M244,128 Q265,122 274,136" stroke="#0F172A" stroke-width="5" fill="none" stroke-linecap="round"/>
+                    </svg>`;
+                case 'coaster': // 6. GTA VI Bardaklık
+                    return `<svg viewBox="0 0 400 260" class="w-full h-full">${baseDefs}
+                        <ellipse cx="200" cy="215" rx="125" ry="18" fill="#000" opacity="0.5"/>
+                        <path d="M95,75 L175,75 L205,155 L235,75 L305,75 L245,200 L165,200 Z" fill="#1E1B4B" stroke="#8B5CF6" stroke-width="5"/>
+                        <text x="200" y="124" text-anchor="middle" font-family="Montserrat,sans-serif" font-weight="900" font-size="22" fill="#FFF">grand</text>
+                        <text x="200" y="146" text-anchor="middle" font-family="Montserrat,sans-serif" font-weight="900" font-size="22" fill="#FFF">theft</text>
+                        <text x="200" y="168" text-anchor="middle" font-family="Montserrat,sans-serif" font-weight="900" font-size="22" fill="#FFF">auto</text>
+                    </svg>`;
+                case 'door-hanger': // 7. GTA 6 Rahatsız Etme Kapı Süsü
+                    return `<svg viewBox="0 0 400 260" class="w-full h-full">${baseDefs}
+                        <path d="M165,30 A35,35 0 1,1 235,30 L248,85 L248,220 L152,220 L152,85 Z" fill="#F8FAFC" stroke="#0F172A" stroke-width="3"/>
+                        <circle cx="200" cy="54" r="18" fill="#120624"/>
+                        <text x="200" y="104" text-anchor="middle" font-family="Montserrat,sans-serif" font-weight="900" font-size="14" fill="#0F172A">DO NOT</text>
+                        <text x="200" y="120" text-anchor="middle" font-family="Montserrat,sans-serif" font-weight="900" font-size="14" fill="#0F172A">DISTURB</text>
+                        <text x="200" y="135" text-anchor="middle" font-family="Montserrat,sans-serif" font-weight="800" font-size="10" fill="#FF3366">PLAYING</text>
+                        <rect x="148" y="142" width="104" height="76" rx="8" fill="#06B6D4" stroke="#EC4899" stroke-width="3"/>
+                        <text x="200" y="172" text-anchor="middle" font-family="Montserrat,sans-serif" font-weight="900" font-size="15" fill="#FFF">grand</text>
+                        <text x="200" y="188" text-anchor="middle" font-family="Montserrat,sans-serif" font-weight="900" font-size="15" fill="#FFF">theft</text>
+                        <text x="200" y="204" text-anchor="middle" font-family="Montserrat,sans-serif" font-weight="900" font-size="15" fill="#FFF">auto</text>
+                    </svg>`;
+                case 'ps5-slim-cover': // 8. COVER GTA VI PS5 Slim
+                    return `<svg viewBox="0 0 400 260" class="w-full h-full">${baseDefs}
+                        <path d="M135,28 L265,28 L252,232 L148,232 Z" fill="#09090B" stroke="#334155" stroke-width="3"/>
+                        <text x="200" y="66" text-anchor="middle" font-family="Montserrat,sans-serif" font-weight="900" font-size="22" fill="#FFF">grand</text>
+                        <text x="200" y="88" text-anchor="middle" font-family="Montserrat,sans-serif" font-weight="900" font-size="22" fill="#FFF">theft</text>
+                        <text x="200" y="110" text-anchor="middle" font-family="Montserrat,sans-serif" font-weight="900" font-size="22" fill="#FFF">auto</text>
+                        <text x="200" y="162" text-anchor="middle" font-family="Montserrat,sans-serif" font-weight="900" font-size="48" fill="#EC4899" stroke="#FFF" stroke-width="1.5">VI</text>
+                        <path d="M200,225 Q204,195 196,178 M196,178 Q180,174 174,185 M196,178 Q212,174 218,185" stroke="#FFF" stroke-width="3.5" fill="none"/>
+                    </svg>`;
+                case 'vertical-stand': // 9. GTA VI Vertical Stand (Mor PS5 Üstü Kontrolcü Askısı)
+                    return `<svg viewBox="0 0 400 260" class="w-full h-full">${baseDefs}
+                        <rect x="135" y="30" width="130" height="200" rx="12" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="2"/>
+                        <rect x="172" y="26" width="56" height="190" rx="8" fill="#7C3AED"/>
+                        <text x="200" y="92" text-anchor="middle" font-family="Montserrat,sans-serif" font-weight="900" font-size="26" fill="#00F0FF" stroke="#1E1B4B" stroke-width="1">VI</text>
+                        <path d="M142,165 Q155,135 182,142 L218,142 Q245,135 258,165 L264,195 Q248,198 236,178 L164,178 Q152,198 136,195 Z" fill="#E2E8F0" stroke="#475569" stroke-width="2"/>
+                    </svg>`;
+                case 'keychain-v2': // 10. GTA VI Anahtarlık v2 (4'lü İkon Koleksiyonu)
+                    return `<svg viewBox="0 0 400 260" class="w-full h-full">${baseDefs}
+                        <rect x="85" y="45" width="82" height="76" rx="16" fill="#FACC15" stroke="#EC4899" stroke-width="4"/>
+                        <text x="126" y="95" text-anchor="middle" font-family="Montserrat,sans-serif" font-weight="900" font-size="34" fill="#111827">R★</text>
+                        <rect x="225" y="45" width="82" height="76" rx="16" fill="#1E1B4B" stroke="#EC4899" stroke-width="4"/>
+                        <text x="266" y="92" text-anchor="middle" font-family="Montserrat,sans-serif" font-weight="900" font-size="22" fill="#FF5E7E">LUCIA</text>
+                        <rect x="85" y="140" width="95" height="76" rx="16" fill="#111827" stroke="#EC4899" stroke-width="4"/>
+                        <text x="132" y="185" text-anchor="middle" font-family="Montserrat,sans-serif" font-weight="900" font-size="18" fill="#FFF">GTA VI</text>
+                        <rect x="215" y="140" width="95" height="76" rx="16" fill="#06B6D4" stroke="#EC4899" stroke-width="4"/>
+                        <text x="262" y="185" text-anchor="middle" font-family="Montserrat,sans-serif" font-weight="900" font-size="22" fill="#EC4899">VI</text>
+                    </svg>`;
+                case 'wheel-key-rack': // 11. GTA 6 Key Rack - GTA VI (Mor Jantlı Duvar Askısı)
+                    return `<svg viewBox="0 0 400 260" class="w-full h-full">${baseDefs}
+                        <rect x="65" y="55" width="270" height="115" rx="18" fill="#E2E8F0" stroke="#7C3AED" stroke-width="5"/>
+                        <text x="135" y="116" text-anchor="middle" font-family="Montserrat,sans-serif" font-weight="900" font-size="36" fill="#7C3AED">VI</text>
+                        <text x="242" y="102" text-anchor="middle" font-family="Montserrat,sans-serif" font-weight="900" font-size="16" fill="#1E1B4B">GRAND THEFT</text>
+                        <text x="242" y="122" text-anchor="middle" font-family="Montserrat,sans-serif" font-weight="900" font-size="16" fill="#7C3AED">AUTO VI</text>
+                        <circle cx="110" cy="175" r="20" fill="#111827" stroke="#7C3AED" stroke-width="5"/>
+                        <circle cx="170" cy="175" r="20" fill="#111827" stroke="#7C3AED" stroke-width="5"/>
+                        <circle cx="230" cy="175" r="20" fill="#111827" stroke="#7C3AED" stroke-width="5"/>
+                        <circle cx="290" cy="175" r="20" fill="#111827" stroke="#7C3AED" stroke-width="5"/>
+                    </svg>`;
+                case 'weapon-icons': // 12. GTA Keychain Collector Pack icons
+                    return `<svg viewBox="0 0 400 260" class="w-full h-full">${baseDefs}
+                        <rect x="65" y="85" width="76" height="76" rx="14" fill="#FFF" stroke="#09090B" stroke-width="6"/>
+                        <path d="M85,135 L122,102 L128,108 L92,142 Z" fill="#09090B"/>
+                        <rect x="162" y="85" width="76" height="76" rx="14" fill="#FFF" stroke="#09090B" stroke-width="6"/>
+                        <circle cx="200" cy="123" r="18" fill="#09090B"/>
+                        <rect x="259" y="85" width="76" height="76" rx="14" fill="#FFF" stroke="#09090B" stroke-width="6"/>
+                        <rect x="278" y="114" width="38" height="16" rx="3" fill="#09090B"/>
+                    </svg>`;
+                case 'dualsense-bw': // 13. GTA VI PS5 DualSense Stand | Black & White Edition
+                    return `<svg viewBox="0 0 400 260" class="w-full h-full">${baseDefs}
+                        <path d="M95,212 L135,140 L265,140 L305,212 Z" fill="#F8FAFC" stroke="#7C3AED" stroke-width="4"/>
+                        <text x="200" y="182" text-anchor="middle" font-family="Montserrat,sans-serif" font-weight="900" font-size="24" fill="#111827">grand theft</text>
+                        <text x="200" y="204" text-anchor="middle" font-family="Montserrat,sans-serif" font-weight="900" font-size="22" fill="#7C3AED">auto VI</text>
+                        <path d="M120,115 Q138,72 175,80 L225,80 Q262,72 280,115 L290,152 Q270,158 255,132 L145,132 Q130,158 110,152 Z" fill="#F8FAFC" stroke="#4C1D95" stroke-width="3"/>
+                    </svg>`;
+                case 'vi-purple-keychain': // 14. Grand Theft Auto VI Anahtarlık
+                    return `<svg viewBox="0 0 400 260" class="w-full h-full">${baseDefs}
+                        <circle cx="200" cy="48" r="18" fill="none" stroke="url(#gMetal_${uid})" stroke-width="4"/>
+                        <path d="M122,78 L184,78 L210,152 L236,78 L282,78 L232,202 L175,202 Z" fill="#7C3AED" stroke="#09090B" stroke-width="6"/>
+                        <rect x="256" y="78" width="34" height="124" fill="#7C3AED" stroke="#09090B" stroke-width="6"/>
+                        <text x="205" y="132" text-anchor="middle" font-family="Montserrat,sans-serif" font-weight="900" font-size="21" fill="#FFF">grand</text>
+                        <text x="205" y="154" text-anchor="middle" font-family="Montserrat,sans-serif" font-weight="900" font-size="21" fill="#FFF">theft</text>
+                        <text x="205" y="176" text-anchor="middle" font-family="Montserrat,sans-serif" font-weight="900" font-size="21" fill="#FFF">auto</text>
+                    </svg>`;
+                case 'fidget-clicker': // 15. GTA VI Fidget Clicker & Keychain
+                    return `<svg viewBox="0 0 400 260" class="w-full h-full">${baseDefs}
+                        <path d="M115,65 L182,65 L210,148 L238,65 L288,65 L234,200 L172,200 Z" fill="#6D28D9" stroke="#FB8500" stroke-width="5"/>
+                        <rect x="262" y="65" width="36" height="135" fill="#6D28D9" stroke="#FB8500" stroke-width="5"/>
+                        <text x="205" y="124" text-anchor="middle" font-family="Montserrat,sans-serif" font-weight="900" font-size="22" fill="#FFF">grand</text>
+                        <text x="205" y="146" text-anchor="middle" font-family="Montserrat,sans-serif" font-weight="900" font-size="22" fill="#FFF">theft</text>
+                        <text x="205" y="168" text-anchor="middle" font-family="Montserrat,sans-serif" font-weight="900" font-size="22" fill="#FFF">auto</text>
+                        <rect x="315" y="185" width="26" height="24" rx="4" fill="#38BDF8" stroke="#0F172A" stroke-width="2"/>
+                    </svg>`;
+                case 'lightbox': // 16. GTA 6 (VI) Lightbox
+                    return `<svg viewBox="0 0 400 260" class="w-full h-full">${baseDefs}
+                        <rect x="40" y="25" width="320" height="210" rx="20" fill="#090312"/>
+                        <path d="M105,52 L182,52 L212,145 L242,52 L296,52 L238,208 L172,208 Z" fill="#A855F7" stroke="#F472B6" stroke-width="6"/>
+                        <rect x="266" y="52" width="38" height="156" fill="#A855F7" stroke="#F472B6" stroke-width="6"/>
+                        <text x="205" y="118" text-anchor="middle" font-family="Montserrat,sans-serif" font-weight="900" font-size="24" fill="#E0F2FE" stroke="#090312" stroke-width="1.5">grand</text>
+                        <text x="205" y="143" text-anchor="middle" font-family="Montserrat,sans-serif" font-weight="900" font-size="24" fill="#E0F2FE" stroke="#090312" stroke-width="1.5">theft</text>
+                        <text x="205" y="168" text-anchor="middle" font-family="Montserrat,sans-serif" font-weight="900" font-size="24" fill="#E0F2FE" stroke="#090312" stroke-width="1.5">auto</text>
+                    </svg>`;
+                case 'ps5-side-logo': // 17. PS5 Pro/Slim – GTA VI kapak logo
+                    return `<svg viewBox="0 0 400 260" class="w-full h-full">${baseDefs}
+                        <path d="M145,28 L255,28 L242,232 L158,232 Z" fill="#F8FAFC" stroke="#94A3B8" stroke-width="2.5"/>
+                        <line x1="154" y1="128" x2="246" y2="128" stroke="#0F172A" stroke-width="6"/>
+                        <path d="M172,54 L196,54 L204,88 L212,54 L232,54 L214,108 L192,108 Z" fill="url(#gSun_${uid})"/>
+                        <text x="202" y="84" text-anchor="middle" font-family="Montserrat,sans-serif" font-weight="900" font-size="11" fill="#FFF">GTA VI</text>
+                    </svg>`;
+                case 'collector-7pack': // 18. GTA VI Inspired anahtarlık koleksiyon 7li
+                    return `<svg viewBox="0 0 400 260" class="w-full h-full">${baseDefs}
+                        <circle cx="200" cy="130" r="95" fill="#92400E" opacity="0.25"/>
+                        <circle cx="135" cy="82" r="24" fill="#EC4899" stroke="#111827" stroke-width="3"/>
+                        <circle cx="200" cy="72" r="24" fill="#FB8500" stroke="#111827" stroke-width="3"/>
+                        <circle cx="265" cy="82" r="24" fill="#7C3AED" stroke="#111827" stroke-width="3"/>
+                        <text x="115" y="168" text-anchor="middle" font-family="Montserrat,sans-serif" font-weight="900" font-size="34" fill="url(#gSun_${uid})">VI</text>
+                        <rect x="165" y="142" width="52" height="44" rx="10" fill="#111827" stroke="#EC4899" stroke-width="3"/>
+                        <rect x="235" y="142" width="62" height="44" rx="10" fill="#FB8500" stroke="#111827" stroke-width="3"/>
+                        <rect x="308" y="122" width="34" height="58" rx="8" fill="#7C3AED" stroke="#EC4899" stroke-width="3"/>
+                    </svg>`;
+                case 'decor-tray': // 19. GTA 6 (VI) dekorluk kase
+                    return `<svg viewBox="0 0 400 260" class="w-full h-full">${baseDefs}
+                        <ellipse cx="200" cy="145" rx="135" ry="62" fill="#09090B" stroke="#334155" stroke-width="4"/>
+                        <ellipse cx="200" cy="138" rx="122" ry="50" fill="#1E1B4B"/>
+                        <text x="200" y="135" text-anchor="middle" font-family="Montserrat,sans-serif" font-weight="900" font-size="22" fill="#FFF">grand</text>
+                        <text x="200" y="156" text-anchor="middle" font-family="Montserrat,sans-serif" font-weight="900" font-size="22" fill="#FFF">theft auto</text>
+                    </svg>`;
+                case 'universal-stand': // 20. GTA VI Universal PS5 & Xbox Controller stand
+                default:
+                    return `<svg viewBox="0 0 400 260" class="w-full h-full">${baseDefs}
+                        <path d="M90,175 L175,175 L205,225 L235,175 L310,175 L255,236 L150,236 Z" fill="#FB8500" stroke="#0284C7" stroke-width="4"/>
+                        <rect x="182" y="45" width="36" height="175" rx="6" fill="#09090B" stroke="#334155" stroke-width="2"/>
+                        <rect x="187" y="110" width="26" height="24" rx="4" fill="#FB8500"/>
+                        <text x="200" y="128" text-anchor="middle" font-family="Montserrat,sans-serif" font-weight="900" font-size="15" fill="#09090B">R★</text>
+                        <text x="200" y="212" text-anchor="middle" font-family="Montserrat,sans-serif" font-weight="900" font-size="16" fill="#FFF">GTA VI</text>
+                    </svg>`;
+            }
+        }
+
+        // Kullanıcının 20 GTA 6 Ürünü — Güzelleştirilmiş İsimler, Kalıcı Görseller ve Birebir Shopier Linkleri
+        const products = [
+            {
+                id: 1,
+                title: "GTA VI PS5 & Xbox Kontrolcü Tutucu",
+                category: "konsol",
+                categoryLabel: "Konsol & Stand",
+                badge: "PS5 & XBOX UYUMLU",
+                specs: "Vice City Palmiye Tasarım • R★ Detaylı",
+                description: "PS5 DualSense ve Xbox kontrolcüleri için özel olarak tasarlanmış, Leonida palmiye ve neon Vice City imzalı çok renkli 3D masaüstü kontrolcü tutucu.",
+                image: "https://cdn.shopier.app/pictures_large/ladesstore__1694fd6c9bf5ca81bcb0c1b2b8d3cd59.webp",
+                svgType: "holder-palm",
+                shopierUrl: "https://www.shopier.com/ladesstore_/52823510"
+            },
+            {
+                id: 2,
+                title: "GTA VI Golden Ticket — Çıkış Günü Özel Bileti",
+                category: "koleksiyon",
+                categoryLabel: "Koleksiyon & Dekor",
+                badge: "GOLDEN EDITION",
+                specs: "Altın Filament • All Day Access Pass",
+                description: "Grand Theft Auto VI çıkış günü anısına özel kabartmalı barkod, kontrolcü ikonu ve Leonida gün batımı detaylarıyla üretilen koleksiyonluk Golden Ticket.",
+                image: "https://cdn.shopier.app/pictures_large/ladesstore__dd79f4abaef13231ae23657cd475ec5d.webp",
+                svgType: "golden-ticket",
+                shopierUrl: "https://www.shopier.com/ladesstore_/52823372"
+            },
+            {
+                id: 3,
+                title: "GTA VI İkonik 3D Logo — Pembe & Beyaz Edition",
+                category: "koleksiyon",
+                categoryLabel: "Koleksiyon & Dekor",
+                badge: "İKONİK LOGO",
+                specs: "Çok Katmanlı 3D Baskı • Masaüstü & Raf",
+                description: "Oyun odanız ve yayıncı masanız için pembe neon konturlu, keskin hatlara sahip ikonik Grand Theft Auto VI 3D masaüstü logosu.",
+                image: "https://cdn.shopier.app/pictures_large/ladesstore__3c6498bd729f1c7742d24962e5ff6403.webp",
+                svgType: "vi-logo-pink",
+                shopierUrl: "https://www.shopier.com/ladesstore_/52823265"
+            },
+            {
+                id: 4,
+                title: "GTA VI Duvar Anahtarlığı — Leonida Palmiye",
+                category: "duvar-masa",
+                categoryLabel: "Duvar & Masa",
+                badge: "3 KANCALI ASKI",
+                specs: "Turkuaz & Mor Palmiye • Yüksek Taşıma Kapasitesi",
+                description: "Araba ve ev anahtarlarınızı düzenli tutarken duvarınıza GTA VI atmosferi katan 3 kancalı, palmiye silüetli dekoratif duvar anahtarlık askısı.",
+                image: "https://cdn.shopier.app/pictures_large/ladesstore__82748814c5b5040c5ecaddcc8341be0e.webp",
+                svgType: "wall-key-rack",
+                shopierUrl: "https://www.shopier.com/ladesstore_/52823203"
+            },
+            {
+                id: 5,
+                title: "GTA VI Leonida Telefon Standı",
+                category: "duvar-masa",
+                categoryLabel: "Duvar & Masa",
+                badge: "MASAÜSTÜ STAND",
+                specs: "Tüm Telefonlarla Uyumlu • Kaymaz Taban",
+                description: "Pembe ve siyah palmiye silüetli tasarımıyla akıllı telefonunuzu hem dikey hem yatay olarak güvenle taşıyan şık 3D masaüstü telefon standı.",
+                image: "https://cdn.shopier.app/pictures_large/ladesstore__7caccfc2cf367cbc2e41077b66dc1a83.webp",
+                svgType: "phone-stand",
+                shopierUrl: "https://www.shopier.com/ladesstore_/52822886"
+            },
+            {
+                id: 6,
+                title: "GTA VI Mor Palmiye Bardaklık Seti",
+                category: "duvar-masa",
+                categoryLabel: "Duvar & Masa",
+                badge: "GAMER DESK",
+                specs: "Isıya Dayanıklı • Kabartma VI Logo",
+                description: "Oyun seanslarınızda içeceklerinizi koyarken masanızı koruyan, mor palmiye dokulu ve 3D kabartma yazılı özel GTA VI bardaklık.",
+                image: "https://cdn.shopier.app/pictures_large/ladesstore__31db4fea53d157cb3d9dd63f175dd4ab.webp",
+                svgType: "coaster",
+                shopierUrl: "https://www.shopier.com/ladesstore_/52822865"
+            },
+            {
+                id: 7,
+                title: "GTA VI 'Do Not Disturb' Kapı Süsü",
+                category: "duvar-masa",
+                categoryLabel: "Duvar & Masa",
+                badge: "OYUN ODASI",
+                specs: "Çift Taraflı Dayanıklı Gövde • Standart Kapı Kolu",
+                description: "GTA VI oynarken rahatsız edilmek istemeyen oyuncular için özel olarak tasarlanmış 'Do Not Disturb - Playing Grand Theft Auto VI' kapı askısı.",
+                image: "https://cdn.shopier.app/pictures_large/ladesstore__17c678ddabf8795edd590966e35c32fc.webp",
+                svgType: "door-hanger",
+                shopierUrl: "https://www.shopier.com/ladesstore_/52822728"
+            },
+            {
+                id: 8,
+                title: "PS5 Slim GTA VI Orta Panel Kapağı",
+                category: "konsol",
+                categoryLabel: "Konsol & Stand",
+                badge: "PS5 SLIM ÖZEL",
+                specs: "Birebir Kasa Uyumu • Kolay Montaj",
+                description: "PlayStation 5 Slim orta şeridine tam oturan, pembe VI ve beyaz palmiye detaylı özel üretim 3D konsol kaplama paneli.",
+                image: "https://cdn.shopier.app/pictures_large/ladesstore__ce0195970a9434fbc266698b4723484f.webp",
+                svgType: "ps5-slim-cover",
+                shopierUrl: "https://www.shopier.com/ladesstore_/52822653"
+            },
+            {
+                id: 9,
+                title: "PS5 Dikey Kontrolcü Askısı — GTA VI",
+                category: "konsol",
+                categoryLabel: "Konsol & Stand",
+                badge: "YER TASARRUFU",
+                specs: "PS5 Üst Kenar Askısı • Çizmez Yüzey",
+                description: "PlayStation 5 konsolunuzun yan paneline zarar vermeden takılan ve DualSense kolunuzu havada şıkça sergileyen mor GTA VI dikey askı.",
+                image: "https://cdn.shopier.app/pictures_large/ladesstore__d8deb9fe0ab186855716a2a190860557.webp",
+                svgType: "vertical-stand",
+                shopierUrl: "https://www.shopier.com/ladesstore_/52822411"
+            },
+            {
+                id: 10,
+                title: "GTA VI Vice City Anahtarlık Serisi v2",
+                category: "anahtarlik",
+                categoryLabel: "Anahtarlık",
+                badge: "V2 SERİSİ",
+                specs: "Canlı Neon Renkler • Metal Zincir Halka",
+                description: "Rockstar sarı amblemi, Lucia pembe figürü, Vice City ve GTA VI logolarından oluşan yüksek detaylı çok renkli 3D anahtarlık serisi.",
+                image: "https://cdn.shopier.app/pictures_large/ladesstore__54dbead805ce3cd202f3fdda273ebf4e.webp",
+                svgType: "keychain-v2",
+                shopierUrl: "https://www.shopier.com/ladesstore_/52822384"
+            },
+            {
+                id: 11,
+                title: "GTA VI Jant Tasarımlı Duvar Anahtarlık Askısı",
+                category: "duvar-masa",
+                categoryLabel: "Duvar & Masa",
+                badge: "OTOMOTİV & GTA",
+                specs: "5 Adet Mor Jant Askı • Garaj & Oda Dekoru",
+                description: "GTA'nın modifiye garaj kültüründen ilham alan, 5 adet döner tekerlek/mor jant askısına sahip ultra şık 3D duvar anahtarlık panosu.",
+                image: "https://cdn.shopier.app/pictures_large/ladesstore__ce8a393a2b0b2ef58828451349376bc2.webp",
+                svgType: "wheel-key-rack",
+                shopierUrl: "https://www.shopier.com/ladesstore_/52822106"
+            },
+            {
+                id: 12,
+                title: "GTA Klasik Silah & Yumruk İkonları Anahtarlık Seti",
+                category: "anahtarlik",
+                categoryLabel: "Anahtarlık",
+                badge: "NOSTALJİ HUD",
+                specs: "Siyah & Beyaz Kontrast • HUD İkonları",
+                description: "Efsanevi GTA HUD arayüzündeki klasik yumruk, roketatar ve hafif makineli ikonlarını cebinize taşıyan koleksiyonluk anahtarlık seti.",
+                image: "https://cdn.shopier.app/pictures_large/ladesstore__60e298a8ee2d9fc8fc12bc0f78b4c7cf.webp",
+                svgType: "weapon-icons",
+                shopierUrl: "https://www.shopier.com/ladesstore_/52822290"
+            },
+            {
+                id: 13,
+                title: "GTA VI PS5 DualSense Standı — Black & White Edition",
+                category: "konsol",
+                categoryLabel: "Konsol & Stand",
+                badge: "BLACK & WHITE",
+                specs: "Geometrik Gövde • Mor Palmiye Amblem",
+                description: "PS5'in ikonik beyaz-siyah tasarım çizgisine ve mor Leonida palmiye temasına birebir uyum sağlayan dengeli DualSense masaüstü standı.",
+                image: "https://cdn.shopier.app/pictures_large/ladesstore__34a8030023437db7ed7a21bfff7a0ffb.webp",
+                svgType: "dualsense-bw",
+                shopierUrl: "https://www.shopier.com/ladesstore_/52822187"
+            },
+            {
+                id: 14,
+                title: "Grand Theft Auto VI Mor & Siyah Anahtarlık",
+                category: "anahtarlik",
+                categoryLabel: "Anahtarlık",
+                badge: "KLASİK VI",
+                specs: "Çift Katman Kabartma • Sağlam Halka",
+                description: "Mor zemin üzerine beyaz kabartma Grand Theft Auto VI tipografisiyle üretilen hafif, sağlam ve günlük kullanıma uygun 3D anahtarlık.",
+                image: "https://cdn.shopier.app/pictures_large/ladesstore__6866c67c656b022d94862d75dd4e1a76.webp",
+                svgType: "vi-purple-keychain",
+                shopierUrl: "https://www.shopier.com/ladesstore_/52822335"
+            },
+            {
+                id: 15,
+                title: "GTA VI Mekanik Switch Fidget Clicker & Anahtarlık",
+                category: "anahtarlik",
+                categoryLabel: "Anahtarlık",
+                badge: "MEKANİK CLICKER",
+                specs: "Mavi Mekanik Klavye Switch • Stres Giderici",
+                description: "İçerisinde gerçek mekanik mavi klavye switch'i bulunan, bastıkça tatmin edici 'klik' sesi veren hem fidget oyuncağı hem anahtarlık.",
+                image: "https://cdn.shopier.app/pictures_large/ladesstore__bc933826424007c1f2d95ab42ae996ef.webp",
+                svgType: "fidget-clicker",
+                shopierUrl: "https://www.shopier.com/ladesstore_/52823611"
+            },
+            {
+                id: 16,
+                title: "GTA VI Neon LED Lightbox — Gece Lambası",
+                category: "koleksiyon",
+                categoryLabel: "Koleksiyon & Dekor",
+                badge: "NEON LED",
+                specs: "USB Güç Bağlantısı • Mor & Pembe Işık",
+                description: "Karanlıkta mor ve pembe neon ışığıyla oyun odanıza büyüleyici bir Leonida gece atmosferi kazandıran 3D LED Lightbox lamba.",
+                image: "https://cdn.shopier.app/pictures_large/ladesstore__cf4f2cf74499806d848f513c6607505d.webp",
+                svgType: "lightbox",
+                shopierUrl: "https://www.shopier.com/ladesstore_/52822068"
+            },
+            {
+                id: 17,
+                title: "PS5 Pro / Slim GTA VI Yan Kapak 3D Logosu",
+                category: "konsol",
+                categoryLabel: "Konsol & Stand",
+                badge: "PS5 PRO & SLIM",
+                specs: "Gün Batımı Renk Geçişi • Konsol Kapağı Amblemi",
+                description: "PS5 Pro ve PS5 Slim yan kapaklarına kolayca uygulanabilen, gün batımı geçişli kabartma Grand Theft Auto VI 3D kapak logosu.",
+                image: "https://cdn.shopier.app/pictures_large/ladesstore__f2ad4a4d65b118c274be1b47066eadb5.webp",
+                svgType: "ps5-side-logo",
+                shopierUrl: "https://www.shopier.com/ladesstore_/52822228"
+            },
+            {
+                id: 18,
+                title: "GTA VI Leonida 7'li Koleksiyon Anahtarlık Seti",
+                category: "anahtarlik",
+                categoryLabel: "Anahtarlık",
+                badge: "7'Lİ MEGA SET",
+                specs: "Flamingo • Timsah • Spor Araba • Motel • Sneaker",
+                description: "Leonida'nın simgeleri Flamingo, Timsah, Gün Batımı Spor Araba, Motel Tabelası, Sneaker, Sürat Teknesi ve VI logosundan oluşan 7'li dev set.",
+                image: "https://cdn.shopier.app/pictures_large/ladesstore__901129ff00ef3221437723942d7586c8.webp",
+                svgType: "collector-7pack",
+                shopierUrl: "https://www.shopier.com/ladesstore_/52822131"
+            },
+            {
+                id: 19,
+                title: "GTA VI Dekoratif Masaüstü Tepsi & Kase",
+                category: "duvar-masa",
+                categoryLabel: "Duvar & Masa",
+                badge: "VALET TRAY",
+                specs: "Anahtar, Saat & Aksesuar Düzenleyici",
+                description: "Giriş konsolunuzda veya çalışma masanızda anahtar, cüzdan ve kulaklıklarınızı düzenli tutan lacivert-siyah GTA VI kabartmalı dekoratif kase.",
+                image: "https://cdn.shopier.app/pictures_large/ladesstore__f4235f0d0da2909d685185294941b72c.webp",
+                svgType: "decor-tray",
+                shopierUrl: "https://www.shopier.com/ladesstore_/52823657"
+            },
+            {
+                id: 20,
+                title: "GTA VI Universal PS5 & Xbox Kontrolcü Standı",
+                category: "konsol",
+                categoryLabel: "Konsol & Stand",
+                badge: "UNIVERSAL STAND",
+                specs: "Turuncu & Mavi VI Taban • Çift Kademe Tutucu",
+                description: "Gün batımı turuncusu ve okyanus mavisi VI logo tabanına sahip, hem PS5 hem Xbox kontrolcülerini ve kulaklığınızı taşıyan universal stand.",
+                image: "https://cdn.shopier.app/pictures_large/ladesstore__e100ff24a170674ffe0c52ce1b215073.webp",
+                svgType: "universal-stand",
+                shopierUrl: "https://www.shopier.com/ladesstore_/52823556"
+            }
+        ];
+
+        const productsGrid = document.getElementById('products-grid');
+        const searchInput = document.getElementById('product-search');
+        let currentCategory = 'all';
+        let currentSearch = '';
+
+        // 20 Ürün Kartını Gerçek Fotoğraflarıyla Ekrana Çizme
+        function renderProducts() {
+            productsGrid.innerHTML = '';
+            const filtered = products.filter(p => {
+                const matchCat = currentCategory === 'all' || p.category === currentCategory;
+                const q = currentSearch.trim().toLowerCase();
+                const matchQuery = !q || p.title.toLowerCase().includes(q) || p.description.toLowerCase().includes(q) || p.categoryLabel.toLowerCase().includes(q);
+                return matchCat && matchQuery;
+            });
+
+            if (filtered.length === 0) {
+                productsGrid.innerHTML = `
+                    <div class="col-span-full text-center py-14 rounded-2xl bg-leonida-900/60 border border-sunset-coral/25">
+                        <i class="fa-solid fa-magnifying-glass text-3xl text-sunset-coral mb-3"></i>
+                        <p class="font-display font-bold text-white">Aradığınız kriterde ürün bulunamadı.</p>
+                        <button type="button" onclick="resetFilters()" class="mt-3 px-4 py-2 rounded-xl bg-sunset-coral text-white text-xs font-bold">Tüm 20 Ürünü Göster</button>
+                    </div>
+                `;
+                return;
+            }
+
+            filtered.forEach((product, idx) => {
+                const card = document.createElement('div');
+                card.className = 'tilt-card rounded-2xl overflow-hidden flex flex-col justify-between group reveal-item is-visible cursor-pointer';
+                card.style.transitionDelay = `${(idx % 8) * 40}ms`;
+                card.setAttribute('data-tilt', '');
+
+                // Karta tıklayınca doğrudan o ürünün kendi Shopier sayfasına yönlendir
+                card.addEventListener('click', (e) => {
+                    if (e.target.closest('a') || e.target.closest('button')) return;
+                    window.open(product.shopierUrl, '_blank', 'noopener,noreferrer');
+                });
+
+                card.innerHTML = `
+                    <div class="holo-sheen"></div>
+                    <div>
+                        <!-- Gerçek Ürün Fotoğrafı Alanı -->
+                        <div class="relative h-60 bg-gradient-to-b from-[#1E0936] to-[#090314] overflow-hidden border-b border-sunset-coral/25">
+                            <img src="${product.image}" alt="${product.title}" loading="lazy"
+                                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                                 class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
+                            <div class="hidden w-full h-full items-center justify-center p-2">
+                                ${createCustomProductSVG(product.svgType)}
+                            </div>
+
+                            <!-- Üst ve Alt Hafif Karartma Gradyanı (Etiket Okunabilirliği İçin) -->
+                            <div class="absolute inset-0 bg-gradient-to-t from-leonida-950/75 via-transparent to-leonida-950/35 pointer-events-none"></div>
+
+                            <!-- Üst Etiketler -->
+                            <div class="absolute top-3 left-3 right-3 flex items-center justify-between gap-2 z-10">
+                                <span class="px-2.5 py-1 rounded-lg bg-leonida-950/85 backdrop-blur-md border border-sunset-amber/40 text-sunset-amber text-[10px] font-display font-bold uppercase tracking-wider">
+                                    ${product.categoryLabel}
+                                </span>
+                                <span class="px-2.5 py-1 rounded-lg bg-gradient-to-r from-sunset-coral to-sunset-orange text-white text-[10px] font-display font-extrabold uppercase tracking-wider shadow-md">
+                                    ${product.badge}
+                                </span>
+                            </div>
+
+                            <!-- Hızlı Önizleme Butonu -->
+                            <button type="button" onclick="openQuickView(${product.id})" title="Fotoğrafı Büyüt & İncele"
+                                    class="absolute bottom-3 right-3 w-8 h-8 rounded-lg bg-leonida-950/85 border border-white/20 text-slate-200 hover:text-sunset-amber hover:border-sunset-amber flex items-center justify-center z-30 transition-all">
+                                <i class="fa-solid fa-expand text-xs"></i>
+                            </button>
+
+                            <!-- Alt Özellik Etiketi -->
+                            <div class="absolute bottom-3 left-3 z-10">
+                                <span class="text-[10px] font-medium text-slate-100 bg-leonida-950/85 backdrop-blur-sm px-2.5 py-1 rounded-md border border-white/15">
+                                    ${product.specs.split('•')[0]}
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- Ürün Başlık & Açıklama -->
+                        <div class="p-5">
+                            <h3 class="font-display text-base font-extrabold text-white leading-snug group-hover:text-sunset-amber transition-colors">
+                                ${product.title}
+                            </h3>
+                            <p class="text-xs text-slate-400 mt-2 leading-relaxed line-clamp-2">
+                                ${product.description}
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- BİREBİR ÜRÜNÜN KENDİ SHOPIER LİNKİ -->
+                    <div class="px-5 pb-5 pt-1 relative z-30">
+                        <a href="${product.shopierUrl}" target="_blank" rel="noopener noreferrer"
+                           class="btn-shopier-primary w-full py-3.5 px-4 rounded-xl text-white font-display font-extrabold text-xs uppercase tracking-wider flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-bolt"></i>
+                            <span>Shopier'de Satın Al</span>
+                            <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                        </a>
+                    </div>
+                `;
+                productsGrid.appendChild(card);
+            });
+
+            attachTiltEffects();
+        }
+
+        window.resetFilters = function() {
+            currentCategory = 'all';
+            currentSearch = '';
+            if (searchInput) searchInput.value = '';
+            document.querySelectorAll('.filter-btn').forEach(b => {
+                const isAll = b.dataset.filter === 'all';
+                b.classList.toggle('active', isAll);
+                b.classList.toggle('bg-gradient-to-r', isAll);
+                b.classList.toggle('from-sunset-coral', isAll);
+                b.classList.toggle('to-sunset-orange', isAll);
+                b.classList.toggle('text-white', isAll);
+                b.classList.toggle('bg-leonida-800/80', !isAll);
+                b.classList.toggle('text-slate-300', !isAll);
+            });
+            renderProducts();
+        };
+
+        // Hızlı İnceleme (Quick-View Modal)
+        const modal = document.getElementById('quick-view-modal');
+        const modalBody = document.getElementById('modal-body');
+
+        window.openQuickView = function(productId) {
+            const p = products.find(item => item.id === productId);
+            if (!p) return;
+
+            modalBody.innerHTML = `
+                <div class="w-full h-72 sm:h-80 rounded-2xl bg-leonida-950 border border-sunset-coral/30 overflow-hidden">
+                    <img src="${p.image}" alt="${p.title}" class="w-full h-full object-contain bg-black/40">
+                </div>
+                <div>
+                    <div class="flex flex-wrap items-center gap-2 mb-2">
+                        <span class="px-2.5 py-0.5 rounded bg-sunset-coral/20 border border-sunset-coral/40 text-sunset-rose font-display font-bold text-[10px] uppercase">${p.badge}</span>
+                        <span class="text-xs text-sunset-amber font-semibold">${p.specs}</span>
+                    </div>
+                    <h3 class="font-display text-xl sm:text-2xl font-black text-white">${p.title}</h3>
+                    <p class="text-sm text-slate-300 mt-2 leading-relaxed">${p.description}</p>
+                </div>
+                <div class="pt-2">
+                    <a href="${p.shopierUrl}" target="_blank" rel="noopener noreferrer"
+                       class="btn-shopier-primary w-full py-4 px-5 rounded-xl text-white font-display font-extrabold text-xs uppercase tracking-wider flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-bolt"></i>
+                        <span>Bu Ürünü Shopier'de Satın Al</span>
+                        <i class="fa-solid fa-arrow-up-right-from-square text-[11px]"></i>
+                    </a>
+                </div>
+            `;
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        };
+
+        document.getElementById('close-modal-btn').addEventListener('click', () => {
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        });
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.classList.add('hidden');
+                modal.classList.remove('flex');
+            }
+        });
+
+        // Kategori Filtreleme & Canlı Arama
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.filter-btn').forEach(b => {
+                    b.classList.remove('active', 'bg-gradient-to-r', 'from-sunset-coral', 'to-sunset-orange', 'text-white', 'shadow-lg', 'shadow-sunset-coral/30');
+                    b.classList.add('bg-leonida-800/80', 'text-slate-300');
+                });
+                btn.classList.add('active', 'bg-gradient-to-r', 'from-sunset-coral', 'to-sunset-orange', 'text-white', 'shadow-lg', 'shadow-sunset-coral/30');
+                btn.classList.remove('bg-leonida-800/80', 'text-slate-300');
+                currentCategory = btn.dataset.filter;
+                renderProducts();
+            });
+        });
+
+        if (searchInput) {
+            searchInput.addEventListener('input', (e) => {
+                currentSearch = e.target.value;
+                renderProducts();
+            });
+        }
+
+        // Leonida Sunset Atmosferik Parçacık Kanvası
+        function initLeonidaParticles() {
+            const canvas = document.getElementById('leonida-particles');
+            if (!canvas) return;
+            const ctx = canvas.getContext('2d');
+            let width, height, particles;
+
+            const colors = ['#FFB703', '#FF3366', '#FB8500', '#8338EC', '#FF5E7E'];
+
+            function resize() {
+                width = canvas.width = canvas.offsetWidth;
+                height = canvas.height = canvas.offsetHeight;
+                particles = Array.from({ length: Math.min(55, Math.floor(width / 24)) }, () => ({
+                    x: Math.random() * width,
+                    y: Math.random() * height,
+                    r: Math.random() * 2.4 + 0.8,
+                    vx: (Math.random() - 0.5) * 0.35,
+                    vy: -Math.random() * 0.45 - 0.15,
+                    color: colors[Math.floor(Math.random() * colors.length)],
+                    alpha: Math.random() * 0.65 + 0.2
+                }));
+            }
+
+            function animate() {
+                ctx.clearRect(0, 0, width, height);
+                particles.forEach(p => {
+                    p.x += p.vx;
+                    p.y += p.vy;
+                    if (p.y < -10) { p.y = height + 10; p.x = Math.random() * width; }
+                    if (p.x < -10) p.x = width + 10;
+                    if (p.x > width + 10) p.x = -10;
+
+                    ctx.beginPath();
+                    ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+                    ctx.fillStyle = p.color;
+                    ctx.globalAlpha = p.alpha;
+                    ctx.shadowBlur = 12;
+                    ctx.shadowColor = p.color;
+                    ctx.fill();
+                });
+                ctx.globalAlpha = 1;
+                ctx.shadowBlur = 0;
+                requestAnimationFrame(animate);
+            }
+
+            window.addEventListener('resize', resize);
+            resize();
+            animate();
+        }
+
+        // Scroll Reveal Gözlemcisi
+        function initScrollReveal() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                    }
+                });
+            }, { threshold: 0.12 });
+
+            document.querySelectorAll('.reveal-item').forEach(el => observer.observe(el));
+        }
+
+        // 3D Tilt & Holografik Işık Efekti
+        function attachTiltEffects() {
+            document.querySelectorAll('[data-tilt]').forEach(card => {
+                if (card.dataset.tiltBound) return;
+                card.dataset.tiltBound = 'true';
+
+                card.addEventListener('mousemove', (e) => {
+                    const rect = card.getBoundingClientRect();
+                    const x = e.clientX - rect.left;
+                    const y = e.clientY - rect.top;
+                    const centerX = rect.width / 2;
+                    const centerY = rect.height / 2;
+                    const rotateX = ((y - centerY) / centerY) * -6;
+                    const rotateY = ((x - centerX) / centerX) * 6;
+
+                    card.style.setProperty('--mx', `${x}px`);
+                    card.style.setProperty('--my', `${y}px`);
+                    card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`;
+                });
+
+                card.addEventListener('mouseleave', () => {
+                    card.style.transform = '';
+                });
+            });
+        }
+
+        // Mobil Menü & SSS
+        document.getElementById('mobile-menu-btn').addEventListener('click', () => {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        document.querySelectorAll('.faq-toggle').forEach(button => {
+            button.addEventListener('click', () => {
+                const content = button.nextElementSibling;
+                const icon = button.querySelector('i');
+                content.classList.toggle('hidden');
+                icon.classList.toggle('rotate-180');
+            });
+        });
+
+        // Sayfa Yüklendiğinde Başlat
+        window.addEventListener('load', () => {
+            renderProducts();
+            initLeonidaParticles();
+            initScrollReveal();
+
+            setTimeout(() => {
+                const curtain = document.getElementById('intro-curtain');
+                if (curtain) curtain.classList.add('fade-out');
+            }, 850);
+        });
+    </script>
+</body>
+</html>
